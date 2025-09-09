@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/logo-logo-shorter-80x77.png" type="image/x-icon">
+    <title>English Mastery | WebticoCR Language Learning</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #4361ee;
+            --secondary: #3a0ca3;
+            --accent: #f72585;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --success: #4cc9f0;
+            --warning: #ffb800;
+            --gray: #6c757d;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        /* Animated background */
+        .animated-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.05;
+            background: 
+                linear-gradient(45deg, var(--primary) 0%, transparent 70%),
+                linear-gradient(135deg, var(--accent) 10%, transparent 80%),
+                linear-gradient(225deg, var(--success) 10%, transparent 80%),
+                linear-gradient(315deg, var(--warning) 100%, transparent 70%);
+            background-size: 400% 400%;
+            animation: gradientBackground 15s ease infinite;
+        }
+
+        @keyframes gradientBackground {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Floating elements */
+        .floating-elements {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .floating-element {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.1;
+            animation: float 15s infinite linear;
+        }
+
+        .floating-element:nth-child(1) {
+            width: 100px;
+            height: 100px;
+            background: var(--primary);
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+            animation-duration: 20s;
+        }
+
+        .floating-element:nth-child(2) {
+            width: 150px;
+            height: 150px;
+            background: var(--accent);
+            top: 60%;
+            left: 80%;
+            animation-delay: -5s;
+            animation-duration: 25s;
+        }
+
+        .floating-element:nth-child(3) {
+            width: 200px;
+            height: 200px;
+            background: var(--success);
+            top: 40%;
+            left: 60%;
+            animation-delay: -10s;
+            animation-duration: 30s;
+        }
+
+        .floating-element:nth-child(4) {
+            width: 120px;
+            height: 120px;
+            background: var(--warning);
+            top: 70%;
+            left: 20%;
+            animation-delay: -15s;
+            animation-duration: 18s;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+            25% {
+                transform: translate(20px, 40px) rotate(90deg);
+            }
+            50% {
+                transform: translate(0, 80px) rotate(180deg);
+            }
+            75% {
+                transform: translate(-20px, 40px) rotate(270deg);
+            }
+            100% {
+                transform: translate(0, 0) rotate(360deg);
+            }
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 1.5rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            animation: slideDown 0.5s ease;
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo i {
+            margin-right: 10px;
+            color: var(--warning);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 2rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            padding: 8px 0;
+            position: relative;
+        }
+
+        nav ul li a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--warning);
+            transition: var(--transition);
+        }
+
+        nav ul li a:hover:after {
+            width: 100%;
+        }
+
+        .auth-buttons {
+            display: flex;
+            align-items: center;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            display: inline-block;
+            cursor: pointer;
+            border: none;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .btn-login {
+            color: white;
+            margin-right: 15px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            background: transparent;
+        }
+
+        .btn-login:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .btn-signup {
+            background: var(--accent);
+            color: white;
+            box-shadow: 0 4px 14px rgba(246, 37, 133, 0.4);
+        }
+
+        .btn-signup:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 18px rgba(246, 37, 133, 0.5);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 160px 0 100px;
+            background: linear-gradient(rgba(67, 97, 238, 0.05) 0%, rgba(58, 12, 163, 0.1) 100%);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--secondary);
+            animation: fadeInDown 1s ease;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+            color: var(--gray);
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            animation: fadeIn 1.5s ease;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+            padding: 12px 30px;
+            box-shadow: 0 4px 14px rgba(67, 97, 238, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: -100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: 0.5s;
+        }
+
+        .btn-primary:hover:after {
+            left: 100%;
+        }
+
+        .btn-outline {
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            padding: 12px 30px;
+            background: transparent;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .btn-outline:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: var(--primary);
+            transition: 0.5s;
+            z-index: -1;
+        }
+
+        .btn-outline:hover:before {
+            left: 0;
+        }
+
+        .btn-outline:hover {
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 18px rgba(67, 97, 238, 0.5);
+        }
+
+        .btn-outline:hover {
+            background: rgba(67, 97, 238, 0.1);
+        }
+
+        /* Features Section */
+        .features {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 4px;
+            background: var(--accent);
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: var(--transition);
+            text-align: center;
+            animation: fadeInUp 1s ease;
+            animation-fill-mode: both;
+        }
+
+        .feature-card:nth-child(1) { animation-delay: 0.2s; }
+        .feature-card:nth-child(2) { animation-delay: 0.4s; }
+        .feature-card:nth-child(3) { animation-delay: 0.6s; }
+
+        .feature-card:hover {
+            transform: translateY(-10px) rotate(2deg);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(67, 97, 238, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: var(--primary);
+            font-size: 30px;
+            transition: var(--transition);
+        }
+
+        .feature-card:hover .feature-icon {
+            transform: scale(1.1) rotate(10deg);
+            background: var(--primary);
+            color: white;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        /* Methodology Section */
+        .methodology {
+            padding: 100px 0;
+            background: linear-gradient(rgba(67, 97, 238, 0.03) 0%, rgba(58, 12, 163, 0.05) 100%);
+        }
+
+        .methodology-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .method-card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            animation: fadeInUp 1s ease;
+            animation-fill-mode: both;
+        }
+
+        .method-card:nth-child(1) { animation-delay: 0.2s; }
+        .method-card:nth-child(2) { animation-delay: 0.4s; }
+        .method-card:nth-child(3) { animation-delay: 0.6s; }
+
+        .method-card:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+
+        .method-icon {
+            width: 70px;
+            height: 70px;
+            background: rgba(67, 97, 238, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            color: var(--primary);
+            font-size: 28px;
+            transition: var(--transition);
+        }
+
+        .method-card:hover .method-icon {
+            transform: rotateY(180deg);
+            background: var(--primary);
+            color: white;
+        }
+
+        .method-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--secondary);
+        }
+
+        .method-card p {
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .method-benefits {
+            background: rgba(67, 97, 238, 0.05);
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: auto;
+            transition: var(--transition);
+        }
+
+        .method-card:hover .method-benefits {
+            background: rgba(67, 97, 238, 0.1);
+            transform: translateX(5px);
+        }
+
+        .method-benefits h4 {
+            font-size: 1rem;
+            margin-bottom: 10px;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+        }
+
+        .method-benefits h4 i {
+            margin-right: 8px;
+        }
+
+        .method-benefits ul {
+            padding-left: 20px;
+            margin-bottom: 0;
+        }
+
+        .method-benefits li {
+            margin-bottom: 5px;
+            font-size: 0.9rem;
+        }
+
+        /* Lessons Section */
+        .lessons {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .lessons-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .lesson-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+            transition: all 0.5s ease;
+            opacity: 0;
+            transform: translateY(20px);
+            position: relative;
+            animation: fadeInUp 0.5s ease forwards;
+        }
+
+        .lesson-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .lesson-card:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+
+        .lesson-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            height: 100%;
+        }
+
+        .lesson-header {
+            background: var(--primary);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .lesson-card:hover .lesson-header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+        }
+
+        .lesson-body {
+            padding: 25px;
+        }
+
+        .lesson-body h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: var(--secondary);
+            transition: var(--transition);
+        }
+
+        .lesson-card:hover .lesson-body h3 {
+            color: var(--primary);
+            transform: translateX(5px);
+        }
+
+        .lesson-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        .personalized-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--accent);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(247, 37, 133, 0.3);
+            animation: pulse 2s infinite;
+        }
+
+        .view-more-container {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .btn-bounce {
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .hidden {
+            display: none;
+        }
+
+       
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                margin-top: 20px;
+                justify-content: center;
+            }
+            
+            nav ul li {
+                margin: 0 10px;
+            }
+            
+            .auth-buttons {
+                margin-top: 20px;
+            }
+            
+            .hero {
+                padding: 180px 0 80px;
+            }
+            
+            .hero h1 {
+                font-size: 2.3rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 200px;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .feature-card, .lesson-card, .method-card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg"></div>
+    <div class="floating-elements">
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <i class="fas fa-language"></i>
+                <span>EnglishMastery</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#methodology">Our Methodology</a></li>
+                    <li><a href="#curriculum">Curriculum</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <a href="#" class="btn btn-login">Login</a>
+                <a href="#" class="btn btn-signup">Sign Up Free</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Personalized English Mastery</h1>
+            <p>One-on-one interactive lessons with personalized feedback and modern teaching methods to help you achieve fluency in English. 27 comprehensive lessons designed specifically for your learning needs.</p>
+            <div class="hero-buttons">
+                <a href="#" class="btn btn-primary">Start Learning Now</a>
+                <a href="#methodology" class="btn btn-outline">Our Teaching Methods</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Learn With Us</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h3>100% Personalized Lessons</h3>
+                    <p>One-on-one instruction tailored to your specific goals, level, and learning style.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>AI-Powered Teaching</h3>
+                    <p>Our AI assistant adapts to your learning style and provides personalized feedback.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Structured Curriculum</h3>
+                    <p>27 comprehensive lessons covering grammar, vocabulary, and practical usage.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Methodology Section -->
+    <section id="methodology" class="methodology">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Teaching Methodology</h2>
+                <p>Discover how our personalized approach helps you master English effectively</p>
+            </div>
+            <div class="methodology-grid">
+                <div class="method-card">
+                    <div class="method-icon">
+                        <i class="fas fa-user-check"></i>
+                    </div>
+                    <h3>One-on-One Instruction</h3>
+                    <p>Every lesson is completely personalized with individual attention from our expert instructors. No group classes - just focused learning tailored to your needs.</p>
+                    <div class="method-benefits">
+                        <h4><i class="fas fa-check-circle"></i> Key Benefits:</h4>
+                        <ul>
+                            <li>Learning pace adapted to your needs</li>
+                            <li>Content focused on your specific goals</li>
+                            <li>Immediate and personalized feedback</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="method-card">
+                    <div class="method-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Communicative Approach</h3>
+                    <p>We emphasize interaction as both the means and ultimate goal of learning English. You'll practice real-life communication from your first lesson.</p>
+                    <div class="method-benefits">
+                        <h4><i class="fas fa-check-circle"></i> Key Benefits:</h4>
+                        <ul>
+                            <li>Develop practical communication skills</li>
+                            <li>Build confidence in real-world situations</li>
+                            <li>Learn through meaningful interaction</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="method-card">
+                    <div class="method-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h3>Task-Based Learning</h3>
+                    <p>You'll complete meaningful tasks using English, focusing on the outcome rather than just language accuracy. This makes learning engaging and practical.</p>
+                    <div class="method-benefits">
+                        <h4><i class="fas fa-check-circle"></i> Key Benefits:</h4>
+                        <ul>
+                            <li>Learn by doing rather than memorizing</li>
+                            <li>Develop problem-solving skills in English</li>
+                            <li>Retain language through practical application</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lessons Section -->
+    <section id="curriculum" class="lessons">
+        <div class="container">
+            <div class="section-title">
+                <h2>Personalized Course Curriculum</h2>
+                <p>Our comprehensive 27-lesson program tailored to your individual needs</p>
+            </div>
+            <div class="lessons-container" id="lessons-container">
+                <!-- Lesson cards will be generated by JavaScript -->
+            </div>
+            
+            <div class="view-more-container">
+                <button id="view-all-btn" class="btn btn-primary btn-bounce">View All 27 Lessons</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Container -->
+    <div id="footer-container"></div>
+
+    <script>
+        // Lesson data with URLs
+        const lessons = [
+            { title: "Articles (a/an/the)", description: "Master the use of English articles through interactive exercises and real-world examples.", url: "lessons/lesson1.html" },
+            { title: "Conjunctions (and, but, or, so, because)", description: "Learn how to connect ideas and sentences using basic conjunctions.", url: "lessons/lesson2.html" },
+            { title: "Imperative", description: "Learn how to give commands, instructions, and make requests in English.", url: "lessons/lesson3.html" },
+            { title: "Letters & Numbers", description: "Master the English alphabet and numerical system with pronunciation guides.", url: "lessons/lesson4.html" },
+            { title: "Nouns & Pronouns (I, me, my, mine)", description: "Understand the use of nouns and pronouns in sentences.", url: "lessons/lesson5.html" },
+            { title: "Singular/Plural & Countables/Uncountables", description: "Learn how to form plurals and understand the difference between countable and uncountable nouns.", url: "lessons/lesson6.html" },
+            { title: "Regular & Irregular Verbs", description: "Master verb conjugation patterns and common irregular verbs in English.", url: "lessons/lesson7.html" },
+            { title: "There is / There are", description: "Learn how to express existence and describe places using this essential structure.", url: "lessons/lesson8.html" },
+            { title: "Demonstratives (this/that/these/those)", description: "Understand how to point to objects and people using demonstrative pronouns.", url: "lessons/lesson9.html" },
+            { title: "Possessives ('s, s', mine/yours)", description: "Master the different ways to express ownership and relationships in English.", url: "lessons/lesson10.html" },
+            { title: "Prepositions of Place", description: "Learn how to describe locations and spatial relationships accurately.", url: "lessons/lesson11.html" },
+            { title: "Present Simple", description: "Master the most common verb tense for habits, facts, and general truths.", url: "lessons/lesson12.html" },
+            { title: "Present Continuous", description: "Learn how to talk about actions happening now and temporary situations.", url: "lessons/lesson13.html" },
+            { title: "Future with 'will'", description: "Master making predictions, promises, and spontaneous decisions about the future.", url: "lessons/lesson14.html" },
+            { title: "Future with 'going to'", description: "Learn how to talk about plans and intentions for the future.", url: "lessons/lesson15.html" },
+            { title: "Past Simple - verb 'to be' (was/were)", description: "Understand how to use the past forms of the essential verb 'to be'.", url: "lessons/lesson16.html" },
+            { title: "Past Simple - other verbs", description: "Master the past tense for regular and irregular verbs in affirmative sentences.", url: "lessons/lesson17.html" },
+            { title: "Past Simple - negative & more irregulars", description: "Learn how to form negative sentences and master additional irregular verbs.", url: "lessons/lesson18.html" },
+            { title: "Modal 'can' (ability, permission, requests)", description: "Master using 'can' for different functions in everyday communication.", url: "lessons/lesson19.html" },
+            { title: "Modals 'should' & 'have to' (advice vs. obligation)", description: "Understand the difference between giving advice and expressing obligation.", url: "lessons/lesson20.html" },
+            { title: "Present Perfect (ever/never, just/yet)", description: "Learn how to connect past actions to the present moment with this versatile tense.", url: "lessons/lesson21.html" },
+            { title: "Comparative & Superlative Adjectives", description: "Master making comparisons between people, objects, and experiences.", url: "lessons/lesson22.html" },
+            { title: "Hobbies & Abilities (can/could, enjoy + -ing)", description: "Learn how to talk about your interests, skills, and past abilities.", url: "lessons/lesson23.html" },
+            { title: "Invitations & Suggestions (Let's, How about, Shall we)", description: "Master the art of making suggestions and inviting people in English.", url: "lessons/lesson24.html" },
+            { title: "At the Restaurant (booking, ordering, paying, complaining)", description: "Learn essential vocabulary and phrases for dining out in English-speaking countries.", url: "lessons/lesson25.html" },
+            { title: "Seasons & Weather (What's the weather like?)", description: "Master talking about climate, seasons, and weather conditions.", url: "lessons/lesson26.html" },
+            { title: "Final Review & Self-Assessment", description: "Review all previous lessons and test your understanding with comprehensive exercises.", url: "lessons/lesson27.html" }
+        ];
+
+        // Generate lesson cards
+        const lessonsContainer = document.getElementById('lessons-container');
+        const viewAllBtn = document.getElementById('view-all-btn');
+        let showingAll = false;
+
+        function generateLessonCards(startIndex = 0, endIndex = 6) {
+            lessonsContainer.innerHTML = '';
+            
+            for (let i = startIndex; i < endIndex; i++) {
+                const lesson = lessons[i];
+                const lessonCard = document.createElement('div');
+                lessonCard.className = 'lesson-card';
+                lessonCard.style.animationDelay = `${(i % 6) * 0.1}s`;
+                lessonCard.innerHTML = `
+                    <a href="${lesson.url}" class="lesson-link">
+                        <div class="personalized-badge">One-on-One</div>
+                        <div class="lesson-header">
+                            <h3>Lesson ${i + 1}</h3>
+                        </div>
+                        <div class="lesson-body">
+                            <h3>${lesson.title}</h3>
+                            <p>${lesson.description}</p>
+                            <div class="lesson-meta">
+                                <span><i class="far fa-clock"></i> 60 min</span>
+                                <span><i class="fas fa-brain"></i> ${i < 10 ? 'Beginner' : (i < 20 ? 'Intermediate' : 'Advanced')}</span>
+                            </div>
+                        </div>
+                    </a>
+                `;
+                lessonsContainer.appendChild(lessonCard);
+            }
+            
+            // Animate the cards
+            setTimeout(() => {
+                const cards = document.querySelectorAll('.lesson-card');
+                cards.forEach((card, index) => {
+                    setTimeout(() => {
+                        card.classList.add('visible');
+                    }, index * 100);
+                });
+            }, 100);
+        }
+
+        // Initial load - show first 6 lessons
+        generateLessonCards(0, 6);
+
+        // View All button functionality
+        viewAllBtn.addEventListener('click', function() {
+            if (showingAll) {
+                generateLessonCards(0, 6);
+                viewAllBtn.textContent = 'View All 27 Lessons';
+                viewAllBtn.classList.add('btn-bounce');
+            } else {
+                generateLessonCards(0, lessons.length);
+                viewAllBtn.textContent = 'Show Less Lessons';
+                viewAllBtn.classList.remove('btn-bounce');
+            }
+            showingAll = !showingAll;
+        });
+
+        // Animate elements on scroll
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.lesson-card, .feature-card, .method-card');
+            
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+                
+                if (elementPosition < screenPosition) {
+                    element.style.opacity = 1;
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        }
+
+        // Load footer from external file
+        function loadFooter() {
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-container').innerHTML = data;
+                })
+                .catch(error => {
+                    console.error('Error loading footer:', error);
+                    // If footer.html doesn't exist, create a default footer
+                    document.getElementById('footer-container').innerHTML = `
+                        <footer>
+                            <div class="container">
+                                <div class="footer-content">
+                                    <div class="footer-column">
+                                        <h3>EnglishMastery</h3>
+                                        <p>Master English with our personalized platform featuring structured lessons, interactive exercises, and one-on-one feedback.</p>
+                                        <div class="social-icons">
+                                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                            <a href="#"><i class="fab fa-twitter"></i></a>
+                                            <a href="#"><i class="fab fa-instagram"></i></a>
+                                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="footer-column">
+                                        <h3>Quick Links</h3>
+                                        <ul>
+                                            <li><a href="#">Home</a></li>
+                                            <li><a href="#methodology">Our Methodology</a></li>
+                                            <li><a href="#curriculum">Curriculum</a></li>
+                                            <li><a href="#">Pricing</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="footer-column">
+                                        <h3>Contact Us</h3>
+                                        <ul>
+                                            <li><i class="fas fa-envelope"></i> info@webticocr.com</li>
+                                            <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                                            <li><i class="fas fa-map-marker-alt"></i> San José, Costa Rica</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="copyright">
+                                    <p>&copy; 2025 WebticoCR. All rights reserved. | Assistant Professor</p>
+                                </div>
+                            </div>
+                        </footer>
+                    `;
+                });
+        }
+
+        // Initialize animations and load footer
+        window.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('load', function() {
+            animateOnScroll();
+            loadFooter();
+        });
+    </script>
+</body>
+</html>

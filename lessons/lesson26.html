@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 26: Seasons & Weather - EnglishMastery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #4361ee;
+            --secondary: #3a0ca3;
+            --accent: #f72585;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --success: #4cc9f0;
+            --warning: #ffb800;
+            --gray: #6c757d;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--dark);
+            background-color: #f9fafb;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 1.5rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+
+        .logo i {
+            margin-right: 10px;
+            color: var(--warning);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            margin-left: 2rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            padding: 8px 0;
+            position: relative;
+        }
+
+        nav ul li a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--warning);
+            transition: var(--transition);
+        }
+
+        nav ul li a:hover:after {
+            width: 100%;
+        }
+
+        /* Lesson Header */
+        .lesson-header {
+            background: linear-gradient(rgba(67, 97, 238, 0.05) 0%, rgba(58, 12, 163, 0.1) 100%);
+            padding: 140px 0 40px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .lesson-title {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: var(--secondary);
+        }
+
+        .lesson-meta {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+            color: var(--gray);
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* Progress bar */
+        .progress-container {
+            width: 100%;
+            background-color: #e0e0e0;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .progress-bar {
+            height: 10px;
+            background-color: var(--success);
+            border-radius: 10px;
+            width: 0%;
+            transition: width 0.5s ease;
+        }
+
+        .score-display {
+            text-align: center;
+            margin: 15px 0;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        /* Lesson Content */
+        .lesson-content {
+            margin-bottom: 50px;
+        }
+
+        .section {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .section-title {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        .section-title i {
+            margin-right: 10px;
+            font-size: 1.5rem;
+        }
+
+        /* Table Styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        th {
+            background-color: rgba(67, 97, 238, 0.1);
+            color: var(--primary);
+        }
+
+        tr:hover {
+            background-color: rgba(67, 97, 238, 0.03);
+        }
+
+        /* Exercise Styles */
+        .exercise {
+            margin: 25px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary);
+            position: relative;
+        }
+
+        .exercise-title {
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--secondary);
+        }
+
+        .options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            margin: 15px 0;
+        }
+
+        .option {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .option:hover {
+            background: rgba(67, 97, 238, 0.1);
+        }
+
+        .option.selected {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            display: inline-block;
+            cursor: pointer;
+            border: none;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+            padding: 12px 30px;
+            box-shadow: 0 4px 14px rgba(67, 97, 238, 0.4);
+            margin-top: 15px;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 18px rgba(67, 97, 238, 0.5);
+        }
+
+        .btn-secondary {
+            background: var(--gray);
+            color: white;
+            padding: 8px 15px;
+            margin-left: 10px;
+            font-size: 0.9rem;
+        }
+
+        .answer-feedback {
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 6px;
+            display: none;
+        }
+
+        .correct {
+            background: rgba(76, 201, 240, 0.1);
+            border-left: 4px solid var(--success);
+            color: #155724;
+        }
+
+        .incorrect {
+            background: rgba(247, 37, 133, 0.1);
+            border-left: 4px solid var(--accent);
+            color: #721c24;
+        }
+
+        /* Resource Links */
+        .resources {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .resource-card {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            border: 1px solid #e0e0e0;
+        }
+
+        .resource-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .resource-card h4 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        /* Completion badge */
+        .completion-badge {
+            display: none;
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px;
+            background: linear-gradient(135deg, var(--success) 0%, var(--primary) 100%);
+            border-radius: 12px;
+            color: white;
+        }
+
+        .badge-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 60px 0 30px;
+            margin-top: 50px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h3 {
+            color: var(--warning);
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #adb5bd;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                margin-top: 20px;
+                justify-content: center;
+            }
+            
+            nav ul li {
+                margin: 10px;
+            }
+            
+            .lesson-title {
+                font-size: 2rem;
+            }
+            
+            .lesson-meta {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .options {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        input[type="text"] {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin: 0 5px;
+            width: 200px;
+        }
+
+        .tip-box {
+            background-color: rgba(76, 201, 240, 0.1);
+            border-left: 4px solid var(--success);
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+
+        .contrast-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .contrast-item {
+            background: white;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .contrast-item h4 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .example-box {
+            background-color: rgba(67, 97, 238, 0.05);
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+
+        .example-item {
+            margin: 10px 0;
+            padding: 8px;
+            border-left: 3px solid var(--primary);
+            background-color: white;
+        }
+
+        @media (max-width: 600px) {
+            .contrast-box {
+                grid-template-columns: 1fr;
+            }
+            
+            input[type="text"] {
+                width: 150px;
+            }
+        }
+
+        .expression-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .expression-card {
+            background: white;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            border-left: 4px solid var(--primary);
+        }
+
+        .expression-card h4 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .season-box {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        }
+
+        .season-box h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 5px;
+        }
+
+        .season-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .season-item {
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 6px;
+        }
+
+        .weather-icon {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <i class="fas fa-language"></i>
+                <span>EnglishMastery</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Lessons</a></li>
+                    <li><a href="#">Practice</a></li>
+                    <li><a href="#">Resources</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Lesson Header -->
+    <div class="lesson-header">
+        <div class="container">
+            <h1 class="lesson-title">Seasons & Weather</h1>
+            <div class="lesson-meta">
+                <div class="meta-item">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Level: A1</span>
+                </div>
+                <div class="meta-item">
+                    <i class="far fa-clock"></i>
+                    <span>Length: 60 min</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-book"></i>
+                    <span>Topic: Weather, seasons, temperature</span>
+                </div>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+            <div class="score-display" id="score-display">Score: 0%</div>
+        </div>
+    </div>
+
+    <!-- Lesson Content -->
+    <div class="container lesson-content">
+        <!-- Lesson Goals -->
+        <div class="section">
+            <h2 class="section-title">
+                <i class="fas fa-bullseye"></i>
+                <span>Lesson Goals</span>
+            </h2>
+            <p>By the end of this lesson, you will be able to:</p>
+            <ul>
+                <li>Ask "What's the weather like?" & answer with correct adjectives & verbs</li>
+                <li>Use <strong>It is... / It's...ing</strong> accurately (sunny vs. it's raining)</li>
+                <li>Read & say temperatures (°C & °F) and extremes</li>
+                <li>Describe seasonal activities & clothes</li>
+                <li>Avoid classic errors: The weather is rain, it is snow</li>
+            </ul>
+        </div>
+
+        <!-- Input & Explanation -->
+        <div class="section">
+            <h2 class="section-title">
+                <i class="fas fa-brain"></i>
+                <span>Input & Explanation</span>
+            </h2>
+            
+            <h3>1. Core Question & Short Answer</h3>
+            <div class="example-box">
+                <div class="example-item"><strong>What's the weather like today?</strong></div>
+                <div class="example-item"><strong>It's sunny / cloudy / windy / foggy / rainy / snowy / hot / cold / warm / cool / dry / humid.</strong></div>
+                <div class="example-item"><strong>It's raining / snowing / drizzling / pouring.</strong> <em>(verbs = continuous)</em></div>
+            </div>
+
+            <h3>2. Verbs vs Adjectives</h3>
+            <table>
+                <tr>
+                    <th>Adjective (state)</th>
+                    <th>Verb (action now)</th>
+                </tr>
+                <tr>
+                    <td>It's sunny.</td>
+                    <td>The sun <strong>is shining</strong>.</td>
+                </tr>
+                <tr>
+                    <td>It's cloudy.</td>
+                    <td>It <strong>isn't raining</strong> now.</td>
+                </tr>
+                <tr>
+                    <td>It's snowy.</td>
+                    <td>It <strong>is snowing</strong> outside.</td>
+                </tr>
+            </table>
+
+            <div class="tip-box">
+                <p><strong>NEVER double adjective + -ing:</strong> ✖️ It's sunnying → ✅ It's sunny / It's shining.</p>
+            </div>
+
+            <h3>3. Temperature</h3>
+            <div class="example-box">
+                <div class="example-item"><strong>20 °C</strong> = twenty degrees Celsius /ˈselsiəs/</div>
+                <div class="example-item"><strong>68 °F</strong> = sixty-eight degrees Fahrenheit /ˈfærənhaɪt/</div>
+                <div class="example-item"><strong>minus 5 °C</strong> = minus five (degrees)</div>
+                <div class="example-item"><strong>zero degrees</strong> /ˈzɪərəʊ dɪˈɡriːz/</div>
+                <div class="example-item">Extremes: boiling (≈35 °C+), freezing (≈0 °C), mild (≈15 °C)</div>
+            </div>
+
+            <h3>4. Extra Phenomena & Intensifiers</h3>
+            <div class="example-box">
+                <div class="example-item"><strong>a bit cold, quite windy, really humid, absolutely boiling</strong></div>
+                <div class="example-item"><strong>heavy rain / light snow / strong wind / thick fog</strong></div>
+                <div class="example-item"><strong>a shower / a storm / thunder and lightning / hail / drought / flood</strong></div>
+            </div>
+
+            <h3>5. Seasonal Vocabulary</h3>
+            <div class="season-box">
+                <h3>Spring</h3>
+                <div class="season-content">
+                    <div class="season-item">
+                        <div class="weather-icon"><i class="fas fa-seedling"></i></div>
+                        <p>blossom, light jacket, allergies</p>
+                    </div>
+                </div>
+            </div>
+            <div class="season-box">
+                <h3>Summer</h3>
+                <div class="season-content">
+                    <div class="season-item">
+                        <div class="weather-icon"><i class="fas fa-sun"></i></div>
+                        <p>beach, sunglasses, sunscreen, picnic, fan, air-con</p>
+                    </div>
+                </div>
+            </div>
+            <div class="season-box">
+                <h3>Autumn/Fall</h3>
+                <div class="season-content">
+                    <div class="season-item">
+                        <div class="weather-icon"><i class="fas fa-leaf"></i></div>
+                        <p>leaves turn yellow, harvest, hoodie, cloudy</p>
+                    </div>
+                </div>
+            </div>
+            <div class="season-box">
+                <h3>Winter</h3>
+                <div class="season-content">
+                    <div class="season-item">
+                        <div class="weather-icon"><i class="fas fa-snowflake"></i></div>
+                        <p>frost, ice, scarf, gloves, heater, ski, snowman</p>
+                    </div>
+                </div>
+            </div>
+            
+            <h3>6. Typical Errors</h3>
+            <table>
+                <tr>
+                    <th>❌ Wrong</th>
+                    <th>✅ Correct</th>
+                </tr>
+                <tr>
+                    <td>The weather <strong>is rain</strong>.</td>
+                    <td>It <strong>is rainy</strong> / It <strong>is raining</strong>.</td>
+                </tr>
+                <tr>
+                    <td>It <strong>snows</strong> now.</td>
+                    <td>It <strong>is snowing</strong> now.</td>
+                </tr>
+                <tr>
+                    <td>It's <strong>very boiling</strong>.</td>
+                    <td>It's <strong>absolutely boiling</strong>. <em>(intensifier)</em></td>
+                </tr>
+                <tr>
+                    <td>There <strong>is cold</strong>.</td>
+                    <td>It <strong>is cold</strong>.</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Guided Practice -->
+        <div class="section">
+            <h2 class="section-title">
+                <i class="fas fa-pen"></i>
+                <span>Guided Practice</span>
+            </h2>
+            
+            <div class="exercise">
+                <div class="exercise-title">1. Choose adjective or verb:</div>
+                <ol type="a">
+                    <li>It <input type="text" class="answer-input" data-answer="is raining"> (rain / is raining) now.</li>
+                    <li>It's <input type="text" class="answer-input" data-answer="cloudy"> (cloudy / is cloudying).</li>
+                </ol>
+                
+                <div class="exercise-title">2. Read temperature:</div>
+                <p>15 °C → <input type="text" class="answer-input" data-answer="fifteen degrees Celsius"></p>
+                
+                <div class="exercise-title">3. Intensifier:</div>
+                <p>a <input type="text" class="answer-input" data-answer="bit"> (bit / very) windy</p>
+                
+                <div class="exercise-title">4. Ask about today's weather:</div>
+                <p><input type="text" class="answer-input" data-answer="What's the weather like today"></p>
+                
+                <div class="exercise-title">5. Season:</div>
+                <p>leaves turn red → <input type="text" class="answer-input" data-answer="autumn"> season</p>
+                
+                <button class="btn btn-primary check-answers">Check Answers</button>
+                <button class="btn btn-secondary reset-exercise">Reset</button>
+                <div class="answer-feedback"></div>
+            </div>
+        </div>
+
+        <!-- Individual Exercises -->
+        <div class="section">
+            <h2 class="section-title">
+                <i class="fas fa-tasks"></i>
+                <span>Individual Exercises</span>
+            </h2>
+            
+            <div class="exercise">
+                <div class="exercise-title">1. Weather adjective → verb (continuous):</div>
+                <ol type="a">
+                    <li>sunny → It <input type="text" class="answer-input" data-answer="is shining">.</li>
+                    <li>rainy → It <input type="text" class="answer-input" data-answer="is raining">.</li>
+                </ol>
+                <button class="btn btn-primary check-answers">Check Answers</button>
+                <button class="btn btn-secondary reset-exercise">Reset</button>
+                <div class="answer-feedback"></div>
+            </div>
+            
+            <div class="exercise">
+                <div class="exercise-title">2. Choose correct form:</div>
+                <ol type="a">
+                    <li>It <input type="text" class="answer-input" data-answer="is snowing"> (snows / is snowing) at the moment.</li>
+                    <li>It <input type="text" class="answer-input" data-answer="is sunny"> (is sunny / is sunning) today.</li>
+                    <li>It <input type="text" class="answer-input" data-answer="rains"> (rains / is raining) every afternoon.</li>
+                    <li>There <input type="text" class="answer-input" data-answer="is"> (is / is being) thick fog.</li>
+                    <li>It <input type="text" class="answer-input" data-answer="absolutely"> (is very / absolutely) freezing.</li>
+                </ol>
+                <button class="btn btn-primary check-answers">Check Answers</button>
+                <button class="btn btn-secondary reset-exercise">Reset</button>
+                <div class="answer-feedback"></div>
+            </div>
+            
+            <div class="exercise">
+                <div class="exercise-title">3. Read temperatures aloud:</div>
+                <ol type="a">
+                    <li>-3 °C → <input type="text" class="answer-input" data-answer="minus three degrees Celsius"></li>
+                    <li>72 °F → <input type="text" class="answer-input" data-answer="seventy-two degrees Fahrenheit"></li>
+                    <li>0 °C → <input type="text" class="answer-input" data-answer="zero degrees Celsius"></li>
+                </ol>
+                <button class="btn btn-primary check-answers">Check Answers</button>
+                <button class="btn btn-secondary reset-exercise">Reset</button>
+                <div class="answer-feedback"></div>
+            </div>
+            
+            <div class="exercise">
+                <div class="exercise-title">4. Multiple choice – natural reply:</div>
+                <p>"What's the weather like today?"</p>
+                <div class="options">
+                    <div class="option" data-correct="true">It's sunny and warm.</div>
+                    <div class="option" data-correct="false">Yes, it is.</div>
+                    <div class="option" data-correct="false">It's like sunny.</div>
+                </div>
+                <button class="btn btn-primary check-answers">Check Answers</button>
+                <button class="btn btn-secondary reset-exercise">Reset</button>
+                <div class="answer-feedback"></div>
+            </div>
+        </div>
+
+        <!-- Completion Badge -->
+        <div class="completion-badge" id="completion-badge">
+            <div class="badge-icon">
+                <i class="fas fa-trophy"></i>
+            </div>
+            <h2>Congratulations!</h2>
+            <p>You've completed Lesson 26: Seasons & Weather</p>
+            <p>Your final score: <span id="final-score">0</span>%</p>
+        </div>
+
+        <!-- Extra Resources -->
+        <div class="section">
+            <h2 class="section-title">
+                <i class="fas fa-book-open"></i>
+                <span>Extra Resources</span>
+            </h2>
+            
+            <div class="resources">
+                <div class="resource-card">
+                    <h4>British Council – Weather vocabulary</h4>
+                    <p>Video & quiz practice</p>
+                    <a href="https://learnenglishteens.britishcouncil.org/vocabulary/a1-a2-vocabulary/weather" target="_blank">Visit Resource →</a>
+                </div>
+                <div class="resource-card">
+                    <h4>Cambridge – "Weather game" interactive</h4>
+                    <p>Practice exercises from Cambridge English</p>
+                    <a href="https://www.cambridgeenglish.org/learning-english/activities-for-learners/" target="_blank">Visit Resource →</a>
+                </div>
+                <div class="resource-card">
+                    <h4>YouTube – "What's the weather like?"</h4>
+                    <p>3-min chant from KidsTV</p>
+                    <a href="https://www.youtube.com/watch?v=K5JSdgvhv8I" target="_blank">Watch Video →</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Homework -->
+        <div class="section">
+            <h2 class="section-title">
+                <i class="fas fa-home"></i>
+                <span>Homework</span>
+            </h2>
+            
+            <ol>
+                <li>Record 60-second weather forecast for tomorrow: 5 adjectives, 5 verbs, 2 temps, 1 intensifier.</li>
+                <li>Write 12-line season blog: 3 sentences each season (weather + activity).</li>
+                <li>Finish exercises 6, 8 & 9 from the individual exercises.</li>
+            </ol>
+            
+            <p style="margin-top: 20px;"><strong>Next Lesson:</strong> Lesson 27 – Final Review & Self-Check (interactive quiz + can-do statements)</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>EnglishMastery</h3>
+                    <p>Master English with our AI-powered platform featuring structured lessons, interactive exercises, and personalized feedback.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Lessons</a></li>
+                        <li><a href="#">Practice</a></li>
+                        <li><a href="#">Resources</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 EnglishMastery. All rights reserved. | AI Assistant Professor</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize lesson progress
+            let totalQuestions = document.querySelectorAll('.answer-input, .option').length;
+            let completedQuestions = 0;
+            let correctAnswers = 0;
+            let exerciseStatus = {};
+            
+            // Load saved progress if available
+            if (localStorage.getItem('lesson26Progress')) {
+                const savedData = JSON.parse(localStorage.getItem('lesson26Progress'));
+                completedQuestions = savedData.completedQuestions || 0;
+                correctAnswers = savedData.correctAnswers || 0;
+                exerciseStatus = savedData.exerciseStatus || {};
+                
+                // Restore answered questions
+                restoreProgress();
+                updateProgressBar();
+                updateScoreDisplay();
+            }
+            
+            // Add event listeners to check answer buttons
+            const checkButtons = document.querySelectorAll('.check-answers');
+            checkButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const exercise = this.closest('.exercise');
+                    const exerciseId = Array.from(document.querySelectorAll('.exercise')).indexOf(exercise);
+                    const inputs = exercise.querySelectorAll('.answer-input');
+                    const options = exercise.querySelectorAll('.option');
+                    const feedback = exercise.querySelector('.answer-feedback');
+                    
+                    let allCorrect = true;
+                    let feedbackHTML = '';
+                    let exerciseCorrect = 0;
+                    let exerciseTotal = inputs.length + options.length;
+                    
+                    // Check if this exercise was already completed
+                    const wasCompleted = exerciseStatus[exerciseId] && exerciseStatus[exerciseId].completed;
+                    
+                    // Check input answers
+                    inputs.forEach(input => {
+                        const userAnswer = input.value.trim().toLowerCase();
+                        const correctAnswer = input.getAttribute('data-answer').toLowerCase();
+                        
+                        if (userAnswer === correctAnswer) {
+                            input.style.borderColor = '#4cc9f0';
+                            input.classList.add('correct');
+                            exerciseCorrect++;
+                        } else {
+                            input.style.borderColor = '#f72585';
+                            input.classList.add('incorrect');
+                            allCorrect = false;
+                            feedbackHTML += `<p>For "${input.previousElementSibling ? input.previousElementSibling.textContent : 'this question'}", the correct answer is "${correctAnswer}"</p>`;
+                        }
+                        
+                        // Update completed questions count if this is a new answer
+                        if (userAnswer && !input.hasAttribute('data-answered')) {
+                            completedQuestions++;
+                            input.setAttribute('data-answered', 'true');
+                        }
+                    });
+                    
+                    // Check option answers
+                    options.forEach(option => {
+                        if (option.classList.contains('selected')) {
+                            const isCorrect = option.getAttribute('data-correct') === 'true';
+                            
+                            if (isCorrect) {
+                                option.style.borderColor = '#4cc9f0';
+                                option.classList.add('correct');
+                                exerciseCorrect++;
+                            } else {
+                                option.style.borderColor = '#f72585';
+                                option.classList.add('incorrect');
+                                allCorrect = false;
+                                feedbackHTML += `<p>"${option.textContent}" is not the correct answer</p>`;
+                            }
+                            
+                            // Update completed questions count if this is a new answer
+                            if (!option.hasAttribute('data-answered')) {
+                                completedQuestions++;
+                                option.setAttribute('data-answered', 'true');
+                            }
+                        }
+                    });
+                    
+                    // Update correct answers count if this exercise wasn't already completed
+                    if (!wasCompleted && allCorrect) {
+                        correctAnswers += exerciseTotal;
+                    } else if (!wasCompleted) {
+                        correctAnswers += exerciseCorrect;
+                    }
+                    
+                    // Save exercise status
+                    exerciseStatus[exerciseId] = {
+                        completed: allCorrect,
+                        score: exerciseCorrect,
+                        total: exerciseTotal
+                    };
+                    
+                    // Save progress to localStorage
+                    saveProgress();
+                    
+                    // Show feedback
+                    if (allCorrect) {
+                        feedback.innerHTML = '<p>All answers correct! Well done! 🎉</p>';
+                        feedback.classList.add('correct');
+                        feedback.classList.remove('incorrect');
+                    } else {
+                        feedback.innerHTML = '<p>Some answers need correction:</p>' + feedbackHTML;
+                        feedback.classList.add('incorrect');
+                        feedback.classList.remove('correct');
+                    }
+                    
+                    feedback.style.display = 'block';
+                    
+                    // Update progress and score displays
+                    updateProgressBar();
+                    updateScoreDisplay();
+                    
+                    // Check if all exercises are completed
+                    checkAllExercisesCompleted();
+                });
+            });
+            
+            // Add event listeners to option buttons
+            const options = document.querySelectorAll('.option');
+            options.forEach(option => {
+                option.addEventListener('click', function() {
+                    // Remove any previous selections in this question group
+                    const parent = this.closest('.options');
+                    parent.querySelectorAll('.option').forEach(opt => {
+                        opt.classList.remove('selected');
+                    });
+                    
+                    // Select this option
+                    this.classList.add('selected');
+                });
+            });
+            
+            // Add event listeners to reset buttons
+            const resetButtons = document.querySelectorAll('.reset-exercise');
+            resetButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const exercise = this.closest('.exercise');
+                    const inputs = exercise.querySelectorAll('.answer-input');
+                    const options = exercise.querySelectorAll('.option');
+                    const feedback = exercise.querySelector('.answer-feedback');
+                    
+                    inputs.forEach(input => {
+                        input.value = '';
+                        input.style.borderColor = '';
+                        input.classList.remove('correct', 'incorrect');
+                        
+                        // Update completed questions count if this was answered
+                        if (input.hasAttribute('data-answered')) {
+                            completedQuestions--;
+                            input.removeAttribute('data-answered');
+                        }
+                    });
+                    
+                    options.forEach(option => {
+                        option.classList.remove('selected', 'correct', 'incorrect');
+                        option.style.borderColor = '';
+                        
+                        // Update completed questions count if this was answered
+                        if (option.hasAttribute('data-answered')) {
+                            completedQuestions--;
+                            option.removeAttribute('data-answered');
+                        }
+                    });
+                    
+                    feedback.style.display = 'none';
+                    
+                    // Reset exercise status
+                    const exerciseId = Array.from(document.querySelectorAll('.exercise')).indexOf(exercise);
+                    if (exerciseStatus[exerciseId]) {
+                        correctAnswers -= exerciseStatus[exerciseId].score;
+                        delete exerciseStatus[exerciseId];
+                    }
+                    
+                    // Save progress to localStorage
+                    saveProgress();
+                    
+                    // Update progress and score displays
+                    updateProgressBar();
+                    updateScoreDisplay();
+                });
+            });
+            
+            // Function to update progress bar
+            function updateProgressBar() {
+                const progressBar = document.getElementById('progress-bar');
+                const progress = totalQuestions > 0 ? (completedQuestions / totalQuestions) * 100 : 0;
+                progressBar.style.width = progress + '%';
+            }
+            
+            // Function to update score display
+            function updateScoreDisplay() {
+                const scoreDisplay = document.getElementById('score-display');
+                const score = totalQuestions > 0 ? Math.round((correctAnswers / totalQuestions) * 100) : 0;
+                scoreDisplay.textContent = `Score: ${score}%`;
+            }
+            
+            // Function to save progress to localStorage
+            function saveProgress() {
+                const progressData = {
+                    completedQuestions: completedQuestions,
+                    correctAnswers: correctAnswers,
+                    exerciseStatus: exerciseStatus
+                };
+                localStorage.setItem('lesson26Progress', JSON.stringify(progressData));
+            }
+            
+            // Function to restore progress from localStorage
+            function restoreProgress() {
+                const inputs = document.querySelectorAll('.answer-input');
+                const options = document.querySelectorAll('.option');
+                
+                // Restore answers based on exercise status
+                for (const [exerciseId, status] of Object.entries(exerciseStatus)) {
+                    const exercise = document.querySelectorAll('.exercise')[exerciseId];
+                    if (!exercise) continue;
+                    
+                    if (status.completed) {
+                        const exerciseInputs = exercise.querySelectorAll('.answer-input');
+                        const exerciseOptions = exercise.querySelectorAll('.option');
+                        
+                        exerciseInputs.forEach(input => {
+                            input.value = input.getAttribute('data-answer');
+                            input.setAttribute('data-answered', 'true');
+                            input.classList.add('correct');
+                        });
+                        
+                        exerciseOptions.forEach(option => {
+                            if (option.getAttribute('data-correct') === 'true') {
+                                option.classList.add('selected', 'correct');
+                                option.setAttribute('data-answered', 'true');
+                            }
+                        });
+                    }
+                }
+            }
+            
+            // Function to check if all exercises are completed
+            function checkAllExercisesCompleted() {
+                const exercises = document.querySelectorAll('.exercise');
+                let allCompleted = true;
+                
+                for (let i = 0; i < exercises.length; i++) {
+                    if (!exerciseStatus[i] || !exerciseStatus[i].completed) {
+                        allCompleted = false;
+                        break;
+                    }
+                }
+                
+                if (allCompleted) {
+                    const completionBadge = document.getElementById('completion-badge');
+                    const finalScore = document.getElementById('final-score');
+                    const score = totalQuestions > 0 ? Math.round((correctAnswers / totalQuestions) * 100) : 0;
+                    
+                    finalScore.textContent = score;
+                    completionBadge.style.display = 'block';
+                    
+                    // Scroll to completion badge
+                    completionBadge.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+            
+            // Initialize progress display
+            updateProgressBar();
+            updateScoreDisplay();
+        });
+    </script>
+</body>
+</html>

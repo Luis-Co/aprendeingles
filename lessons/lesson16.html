@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 16: Past Simple - Verb "to be" - EnglishMastery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #4361ee;
+            --secondary: #3a0ca3;
+            --accent: #f72585;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --success: #4cc9f0;
+            --warning: #ffb800;
+            --gray: #6c757d;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--dark);
+            background-color: #f9fafb;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 1.5rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        .logo i {
+            margin-right: 10px;
+            color: var(--warning);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            margin-left: 2rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            padding: 8px 0;
+            position: relative;
+        }
+
+        nav ul li a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--warning);
+            transition: var(--transition);
+        }
+
+        nav ul li a:hover:after {
+            width: 100%;
+        }
+
+        /* Lesson Header */
+        .lesson-header {
+            background: linear-gradient(rgba(67, 97, 238, 0.05) 0%, rgba(58, 12, 163, 0.1) 100%);
+            padding: 140px 0 40px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .lesson-title {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .lesson-meta {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+            color: var(--gray);
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* Progress bar */
+        .progress-container {
+            width: 100%;
+            background-color: #e0e0e0;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .progress-bar {
+            height: 10px;
+            background-color: var(--success);
+            border-radius: 10px;
+            width: 0%;
+            transition: width 0.5s ease;
+        }
+
+        .score-display {
+            text-align: center;
+            margin: 15px 0;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        /* Lesson Content */
+        .lesson-content {
+            margin-bottom: 50px;
+        }
+
+        .section {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .section-title {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            color: var(--primary);
+            position: relative;
+        }
+
+        .section-title i {
+            margin-right: 10px;
+            font-size: 1.5rem;
+        }
+
+        /* Table Styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        th {
+            background-color: rgba(67, 97, 238, 0.1);
+            color: var(--primary);
+        }
+
+        tr:hover {
+            background-color: rgba(67, 97, 238, 0.03);
+        }
+
+        /* Exercise Styles */
+        .exercise {
+            margin: 25px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary);
+            position: relative;
+        }
+
+        .exercise-title {
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--secondary);
+        }
+
+        .options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            margin: 15px 0;
+        }
+
+        .option {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .option:hover {
+            background: rgba(67, 97, 238, 0.1);
+        }
+
+        .option.selected {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            display: inline-block;
+            cursor: pointer;
+            border: none;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+            padding: 12px 30px;
+            box-shadow: 0 4px 14px rgba(67, 97, 238, 0.4);
+            margin-top: 15px;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 18px rgba(67, 97, 238, 0.5);
+        }
+
+        .btn-secondary {
+            background: var(--gray);
+            color: white;
+            padding: 8px 15px;
+            margin-left: 10px;
+        }
+
+        .answer-feedback {
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 6px;
+            display: none;
+        }
+
+        .correct {
+            background: rgba(76, 201, 240, 0.1);
+            border-left: 4px solid var(--success);
+            color: #155724;
+        }
+
+        .incorrect {
+            background: rgba(247, 37, 133, 0.1);
+            border-left: 4px solid var(--accent);
+            color: #721c24;
+        }
+
+        /* Visualization Section */
+        .visualization {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .visual-card {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e0e0e0;
+            text-align: center;
+        }
+
+        .visual-card h4 {
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .demo-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(45deg, #e0e0e0, #f5f5f5);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .demo-item {
+            position: absolute;
+            background: var(--primary);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+        }
+
+        /* Resource Links */
+        .resources {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .resource-card {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            border: 1px solid #e0e0e0;
+        }
+
+        .resource-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .resource-card h4 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        /* Completion badge */
+        .completion-badge {
+            display: none;
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px;
+            background: linear-gradient(135deg, var(--success) 0%, var(--primary) 100%);
+            border-radius: 12px;
+            color: white;
+        }
+
+        .badge-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        /* Timeline visualization */
+        .timeline {
+            width: 100%;
+            height: 100px;
+            background: #f0f0f0;
+            border-radius: 8px;
+            position: relative;
+            margin: 20px 0;
+            overflow: hidden;
+        }
+
+        .timeline-marker {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--primary);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 60px 0 30px;
+            margin-top: 50px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h3 {
+            color: var(--warning);
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #adb5bd;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                margin-top: 20px;
+                justify-content: center;
+            }
+            
+            nav ul li {
+                margin: 10px;
+            }
+            
+            .lesson-title {
+                font-size: 2rem;
+            }
+            
+            .lesson-meta {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .options {
+                grid-template-columns: 1fr;
+            }
+            
+            .visualization {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <i class="fas fa-language"></i>
+                <span>EnglishMastery</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Lessons</a></li>
+                    <li><a href="#">Practice</a></li>
+                    <li><a href="#">Resources</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Lesson Header -->
+    <div class="lesson-header">
+        <div class="container">
+            <h1 class="lesson-title">Past Simple: Verb "to be"</h1>
+            <div class="lesson-meta">
+                <div class="meta-item">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Level: A1</span>
+                </div>
+                <div class="meta-item">
+                    <i class="far fa-clock"></i>
+                    <span>Length: 60 min</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-book"></i>
+                    <span>Topic: was/were, wasn't/weren't, past states & places</span>
+                </div>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+            <div class="score-display" id="score-display">Score: 0%</div>
+        </div>
+    </div>
+
+    <!-- Lesson Content -->
+    <div class="container lesson-content">
+        <!-- Lesson Goals -->
+        <div class="section">
+            <h2 class="section-title">
+                <i class="fas fa-bullseye"></i>
+                <span>Lesson Goals</span>
+            </h2>
+            <p>By the end of this lesson, you will be able to:</p>
+            <ul>
+                <li>Use <strong>was / were</strong> correctly for all persons (I was, they were…)</li>
+                <li>Form negatives <strong>wasn't / weren't</strong> & questions <strong>Was…? / Were…?</strong></li>
+                <li>Answer with short forms: Yes, I was / No, they weren't</li>
+                <li>Apply past-time expressions: yesterday, last night, in 2020, ago</li>
+                <li>Avoid classic errors: <em>I were, he wasn't work, we was</em></li>
+            </ul>
+        </div>
+
+        <!-- Input & Explanation -->
+        <div class="section">
+            <h2 class="section-title">
+                <i class="fas fa-brain"></i>
+                <span>Input & Explanation</span>
+            </h2>
+            
+            <h3>1. Form Summary</h3>
+            <table>
+                <tr>
+                    <th></th>
+                    <th>Affirmative</th>
+                    <th>Negative</th>
+                    <th>Question</th>
+                </tr>
+                <tr>
+                    <td><strong>I / He / She / It</strong></td>
+                    <td><strong>was</strong></td>
+                    <td><strong>was not (wasn't)</strong></td>
+                    <td><strong>Was</strong> I…?</td>
+                </tr>
+                <tr>
+                    <td><strong>You / We / They</strong></td>
+                    <td><strong>were</strong></td>
+                    <td><strong>were not (weren't)</strong></td>
+                    <td><strong>Were</strong> you…?</td>
+                </tr>
+            </table>
+            
+            <p><strong>NO "did" with "to be" in past:</strong><br>
+            ✖️ Did he was…? → ✅ Was he…?</p>
+            
+            <h3>2. Contractions (spoken & informal)</h3>
+            <p><strong>wasn't</strong> /ˈwɒzənt/ <strong>weren't</strong> /wɜːnt/<br>
+            <strong>Were not</strong> = strong denial: <strong>We were NOT happy</strong> (emphatic)</p>
+            
+            <h3>3. Uses at A1</h3>
+            <div class="visualization">
+                <div class="visual-card">
+                    <h4>Past State / Description</h4>
+                    <div class="demo-image">
+                        <div class="demo-item" style="top: 40%; left: 50%; transform: translate(-50%, -50%);">She was tired</div>
+                    </div>
+                    <p>She <strong>was</strong> tired. The keys <strong>were</strong> on the table.</p>
+                </div>
+                <div class="visual-card">
+                    <h4>Past Place / Location</h4>
+                    <div class="demo-image">
+                        <div class="demo-item" style="top: 40%; left: 50%; transform: translate(-50%, -50%);">I was at home</div>
+                    </div>
+                    <p>I <strong>was</strong> at home last night. They <strong>weren't</strong> in the photo.</p>
+                </div>
+                <div class="visual-card">
+                    <h4>Past Age / Price / Weather</h4>
+                    <div class="demo-image">
+                        <div class="demo-item" style="top: 40%; left: 50%; transform: translate(-50%, -50%);">It was sunny</div>
+                    </div>
+                    <p>He <strong>was</strong> 10 in 2015. It <strong>was</strong> sunny yesterday.</p>
+                </div>
+            </div>
+            
+            <h3>4. Time Expressions</h3>
+            <div class="timeline">
+                <div class="timeline-marker" style="left: 10%;">yesterday</div>
+                <div class="timeline-marker" style="left: 30%;">last night</div>
+                <div class="timeline-marker" style="left: 50%;">last week</div>
+                <div class="timeline-marker" style="left: 70%;">in 2020</div>
+                <div class="timeline-marker" style="left: 90%;">two days ago</div>
+            </div>
+            
+            <h3>5. Questions & Short Answers</h3>
+            <p>Was the test difficult? – Yes, <strong>it was</strong>. / No, <strong>it wasn't</strong>.<br>
+            Were your parents angry? – Yes, <strong>they were</strong>. / No, <strong>they weren't</strong>.</p>
+            
+            <h3>6. Common Errors</h3>
+            <table>
+                <tr>
+                    <th>❌ Wrong</th>
+                    <th>✅ Correct</th>
+                </tr>
+                <tr>
+                    <td>I <strong>were</strong> at school.</td>
+                    <td>I <strong>was</strong> at school.</td>
+                </tr>
+                <tr>
+                    <td>He <strong>wasn't work</strong> yesterday.</td>
+                    <td>He <strong>didn't work</strong> OR He <strong>wasn't at work</strong>.</td>
+                </tr>
+                <tr>
+                    <td><strong>Was they</strong> late?</td>
+                    <td><strong>Were they</strong> late?</td>
+                </tr>
+                <tr>
+                    <td>We <strong>was</strong> happy.</td>
+                    <td>We <strong>were</strong> happy.</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Guided Practice -->
+        <div class="section">
+            <h2 class="section-title">
+                <i class="fas fa-pen"></i>
+                <span>Guided Practice</span>
+            </h2>
+            
+            <div class="exercise">
+                <div class="exercise-title">1. Choose was / were:</div>
+                <ol type="a">
+                    <li>It <select class="answer-select" data-answer="was">
+                        <option value="">Select</option>
+                        <option value="was">was</option>
+                        <option value="were">were</option>
+                    </select> cold yesterday.</li>
+                    <li>We <select class="answer-select" data-answer="were">
+                        <option value="">Select</option>
+                        <option value="was">was</option>
+                        <option value="were">were</option>
+                    </select> at the cinema.</li>
+                </ol>
+                
+                <div class="exercise-title">2. Make negative:</div>
+                <p>She was late. → <input type="text" class="answer-input" data-answer="She wasn't late"></p>
+                
+                <div class="exercise-title">3. Make question:</div>
+                <p>they / at the party / ? → <input type="text" class="answer-input" data-answer="Were they at the party"></p>
+                
+                <div class="exercise-title">4. Short answer:</div>
+                <p>Was he angry? (no) → <input type="text" class="answer-input" data-answer="No, he wasn't"></p>
+                
+                <button class="btn btn-primary check-answers">Check Answers</button>
+                <button class="btn btn-secondary reset-exercise">Reset</button>
+                <div class="answer-feedback"></div>
+            </div>
+        </div>
+
+        <!-- Individual Exercises -->
+        <div class="section">
+            <h2 class="section-title">
+                <i class="fas fa-tasks"></i>
+                <span>Individual Exercises</span>
+            </h2>
+            
+            <div class="exercise">
+                <div class="exercise-title">1. Fill was / were:</div>
+                <ol type="a">
+                    <li>I <input type="text" class="answer-input" data-answer="was"> born in 2005.</li>
+                    <li>My parents <input type="text" class="answer-input" data-answer="were"> on holiday last month.</li>
+                    <li>There <input type="text" class="answer-input" data-answer="was"> a big concert in town.</li>
+                    <li>The keys <input type="text" class="answer-input" data-answer="were"> in my bag.</li>
+                    <li>We <input type="text" class="answer-input" data-answer="were"> very tired after the trip.</li>
+                </ol>
+                <button class="btn btn-primary check-answers">Check Answers</button>
+                <button class="btn btn-secondary reset-exercise">Reset</button>
+                <div class="answer-feedback"></div>
+            </div>
+            
+            <div class="exercise">
+                <div class="exercise-title">2. Negative sentences:</div>
+                <ol type="a">
+                    <li>I was at home. → <input type="text" class="answer-input" data-answer="I wasn't at home"></li>
+                    <li>They were happy. → <input type="text" class="answer-input" data-answer="They weren't happy"></li>
+                </ol>
+                <button class="btn btn-primary check-answers">Check Answers</button>
+                <button class="btn btn-secondary reset-exercise">Reset</button>
+                <div class="answer-feedback"></div>
+            </div>
+            
+            <div class="exercise">
+                <div class="exercise-title">3. Make questions:</div>
+                <ol type="a">
+                    <li>she / your teacher / ? → <input type="text" class="answer-input" data-answer="Was she your teacher"></li>
+                    <li>you / in Madrid / last year / ? → <input type="text" class="answer-input" data-answer="Were you in Madrid last year"></li>
+                </ol>
+                <button class="btn btn-primary check-answers">Check Answers</button>
+                <button class="btn btn-secondary reset-exercise">Reset</button>
+                <div class="answer-feedback"></div>
+            </div>
+        </div>
+
+        <!-- Completion Badge -->
+        <div class="completion-badge" id="completion-badge">
+            <div class="badge-icon">
+                <i class="fas fa-trophy"></i>
+            </div>
+            <h2>Congratulations!</h2>
+            <p>You've completed Lesson 16: Past Simple - Verb "to be"</p>
+            <p>Your final score: <span id="final-score">0</span>%</p>
+        </div>
+
+        <!-- Extra Resources -->
+        <div class="section">
+            <h2 class="section-title">
+                <i class="fas fa-book-open"></i>
+                <span>Extra Resources</span>
+            </h2>
+            
+            <div class="resources">
+                <div class="resource-card">
+                    <h4>British Council – Past simple "to be" video & quiz</h4>
+                    <p>Interactive quiz to test your knowledge</p>
+                    <a href="https://learnenglishteens.britishcouncil.org/grammar/a1-a2-grammar/past-simple-be" target="_blank">Visit Resource →</a>
+                </div>
+                <div class="resource-card">
+                    <h4>Cambridge – Interactive "Was or were?" game</h4>
+                    <p>Practice exercises from Cambridge English</p>
+                    <a href="https://www.cambridgeenglish.org/learning-english/activities-for-learners/" target="_blank">Visit Resource →</a>
+                </div>
+                <div class="resource-card">
+                    <h4>YouTube – "Was Were Song"</h4>
+                    <p>3-min chant from KidsTV</p>
+                    <a href="https://www.youtube.com/watch?v=8qUsgWI2Uo0" target="_blank">Watch Video →</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Homework -->
+        <div class="section">
+            <h2 class="section-title">
+                <i class="fas fa-home"></i>
+                <span>Homework</span>
+            </h2>
+            
+            <ol>
+                <li>Record 45 seconds: describe three photos from last year using <strong>was/were/wasn't/weren't</strong> + prepositions.</li>
+                <li>Write 10 sentences: 5 affirmative, 3 negative, 2 questions about your last birthday.</li>
+                <li>Finish exercises 6, 9 & 10 from the individual exercises.</li>
+            </ol>
+            
+            <p style="margin-top: 20px;"><strong>Next Lesson:</strong> Lesson 17 – Past Simple (other verbs) (regular -ed & top 20 irregulars)</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>EnglishMastery</h3>
+                    <p>Master English with our AI-powered platform featuring structured lessons, interactive exercises, and personalized feedback.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Lessons</a></li>
+                        <li><a href="#">Practice</a></li>
+                        <li><a href="#">Resources</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 EnglishMastery. All rights reserved. | AI Assistant Professor</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize lesson progress
+            let totalQuestions = document.querySelectorAll('.answer-input, .answer-select').length;
+            let completedQuestions = 0;
+            let correctAnswers = 0;
+            let exerciseStatus = {};
+            
+            // Load saved progress if available
+            if (localStorage.getItem('lesson16Progress')) {
+                const savedData = JSON.parse(localStorage.getItem('lesson16Progress'));
+                completedQuestions = savedData.completedQuestions || 0;
+                correctAnswers = savedData.correctAnswers || 0;
+                exerciseStatus = savedData.exerciseStatus || {};
+                
+                // Restore answered questions
+                restoreProgress();
+                updateProgressBar();
+                updateScoreDisplay();
+            }
+            
+            // Add event listeners to check answer buttons
+            const checkButtons = document.querySelectorAll('.check-answers');
+            checkButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const exercise = this.closest('.exercise');
+                    const exerciseId = Array.from(document.querySelectorAll('.exercise')).indexOf(exercise);
+                    const inputs = exercise.querySelectorAll('.answer-input');
+                    const selects = exercise.querySelectorAll('.answer-select');
+                    const feedback = exercise.querySelector('.answer-feedback');
+                    
+                    let allCorrect = true;
+                    let feedbackHTML = '';
+                    let exerciseCorrect = 0;
+                    let exerciseTotal = inputs.length + selects.length;
+                    
+                    // Check if this exercise was already completed
+                    const wasCompleted = exerciseStatus[exerciseId] && exerciseStatus[exerciseId].completed;
+                    
+                    // Check input answers
+                    inputs.forEach(input => {
+                        const userAnswer = input.value.trim().toLowerCase();
+                        const correctAnswer = input.getAttribute('data-answer').toLowerCase();
+                        
+                        if (userAnswer === correctAnswer) {
+                            input.style.borderColor = '#4cc9f0';
+                            input.classList.add('correct');
+                            exerciseCorrect++;
+                        } else {
+                            input.style.borderColor = '#f72585';
+                            input.classList.add('incorrect');
+                            allCorrect = false;
+                            feedbackHTML += `<p>For "${input.previousElementSibling ? input.previousElementSibling.textContent : 'this question'}", the correct answer is "${correctAnswer}"</p>`;
+                        }
+                        
+                        // Update completed questions count if this is a new answer
+                        if (userAnswer && !input.hasAttribute('data-answered')) {
+                            completedQuestions++;
+                            input.setAttribute('data-answered', 'true');
+                        }
+                    });
+                    
+                    // Check select answers
+                    selects.forEach(select => {
+                        const userAnswer = select.value;
+                        const correctAnswer = select.getAttribute('data-answer');
+                        
+                        if (userAnswer === correctAnswer) {
+                            select.style.borderColor = '#4cc9f0';
+                            select.classList.add('correct');
+                            exerciseCorrect++;
+                        } else {
+                            select.style.borderColor = '#f72585';
+                            select.classList.add('incorrect');
+                            allCorrect = false;
+                            feedbackHTML += `<p>The correct answer is "${correctAnswer}"</p>`;
+                        }
+                        
+                        // Update completed questions count if this is a new answer
+                        if (userAnswer && !select.hasAttribute('data-answered')) {
+                            completedQuestions++;
+                            select.setAttribute('data-answered', 'true');
+                        }
+                    });
+                    
+                    // Update correct answers count if this exercise wasn't already completed
+                    if (!wasCompleted && allCorrect) {
+                        correctAnswers += exerciseTotal;
+                    } else if (!wasCompleted) {
+                        correctAnswers += exerciseCorrect;
+                    }
+                    
+                    // Save exercise status
+                    exerciseStatus[exerciseId] = {
+                        completed: allCorrect,
+                        score: exerciseCorrect,
+                        total: exerciseTotal
+                    };
+                    
+                    // Save progress to localStorage
+                    saveProgress();
+                    
+                    // Show feedback
+                    if (allCorrect) {
+                        feedback.innerHTML = '<p>All answers correct! Well done! 🎉</p>';
+                        feedback.classList.add('correct');
+                        feedback.classList.remove('incorrect');
+                    } else {
+                        feedback.innerHTML = '<p>Some answers need correction:</p>' + feedbackHTML;
+                        feedback.classList.add('incorrect');
+                        feedback.classList.remove('correct');
+                    }
+                    
+                    feedback.style.display = 'block';
+                    
+                    // Update progress and score displays
+                    updateProgressBar();
+                    updateScoreDisplay();
+                    
+                    // Check if all exercises are completed
+                    checkAllExercisesCompleted();
+                });
+            });
+            
+            // Add event listeners to reset buttons
+            const resetButtons = document.querySelectorAll('.reset-exercise');
+            resetButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const exercise = this.closest('.exercise');
+                    const inputs = exercise.querySelectorAll('.answer-input');
+                    const selects = exercise.querySelectorAll('.answer-select');
+                    const feedback = exercise.querySelector('.answer-feedback');
+                    
+                    inputs.forEach(input => {
+                        input.value = '';
+                        input.style.borderColor = '';
+                        input.classList.remove('correct', 'incorrect');
+                        
+                        // Update completed questions count if this was answered
+                        if (input.hasAttribute('data-answered')) {
+                            completedQuestions--;
+                            input.removeAttribute('data-answered');
+                        }
+                    });
+                    
+                    selects.forEach(select => {
+                        select.selectedIndex = 0;
+                        select.style.borderColor = '';
+                        select.classList.remove('correct', 'incorrect');
+                        
+                        // Update completed questions count if this was answered
+                        if (select.hasAttribute('data-answered')) {
+                            completedQuestions--;
+                            select.removeAttribute('data-answered');
+                        }
+                    });
+                    
+                    feedback.style.display = 'none';
+                    
+                    // Reset exercise status
+                    const exerciseId = Array.from(document.querySelectorAll('.exercise')).indexOf(exercise);
+                    if (exerciseStatus[exerciseId]) {
+                        correctAnswers -= exerciseStatus[exerciseId].score;
+                        delete exerciseStatus[exerciseId];
+                    }
+                    
+                    // Save progress to localStorage
+                    saveProgress();
+                    
+                    // Update progress and score displays
+                    updateProgressBar();
+                    updateScoreDisplay();
+                });
+            });
+            
+            // Function to update progress bar
+            function updateProgressBar() {
+                const progressBar = document.getElementById('progress-bar');
+                const progress = totalQuestions > 0 ? (completedQuestions / totalQuestions) * 100 : 0;
+                progressBar.style.width = progress + '%';
+            }
+            
+            // Function to update score display
+            function updateScoreDisplay() {
+                const scoreDisplay = document.getElementById('score-display');
+                const score = totalQuestions > 0 ? Math.round((correctAnswers / totalQuestions) * 100) : 0;
+                scoreDisplay.textContent = `Score: ${score}%`;
+            }
+            
+            // Function to save progress to localStorage
+            function saveProgress() {
+                const progressData = {
+                    completedQuestions: completedQuestions,
+                    correctAnswers: correctAnswers,
+                    exerciseStatus: exerciseStatus
+                };
+                localStorage.setItem('lesson16Progress', JSON.stringify(progressData));
+            }
+            
+            // Function to restore progress from localStorage
+            function restoreProgress() {
+                const inputs = document.querySelectorAll('.answer-input');
+                const selects = document.querySelectorAll('.answer-select');
+                
+                // Restore answers based on exercise status
+                for (const [exerciseId, status] of Object.entries(exerciseStatus)) {
+                    const exercise = document.querySelectorAll('.exercise')[exerciseId];
+                    if (!exercise) continue;
+                    
+                    if (status.completed) {
+                        const exerciseInputs = exercise.querySelectorAll('.answer-input');
+                        const exerciseSelects = exercise.querySelectorAll('.answer-select');
+                        
+                        exerciseInputs.forEach(input => {
+                            input.value = input.getAttribute('data-answer');
+                            input.setAttribute('data-answered', 'true');
+                            input.classList.add('correct');
+                        });
+                        
+                        exerciseSelects.forEach(select => {
+                            const correctAnswer = select.getAttribute('data-answer');
+                            for (let i = 0; i < select.options.length; i++) {
+                                if (select.options[i].value === correctAnswer) {
+                                    select.selectedIndex = i;
+                                    break;
+                                }
+                            }
+                            select.setAttribute('data-answered', 'true');
+                            select.classList.add('correct');
+                        });
+                    }
+                }
+            }
+            
+            // Function to check if all exercises are completed
+            function checkAllExercisesCompleted() {
+                const exercises = document.querySelectorAll('.exercise');
+                let allCompleted = true;
+                
+                for (let i = 0; i < exercises.length; i++) {
+                    if (!exerciseStatus[i] || !exerciseStatus[i].completed) {
+                        allCompleted = false;
+                        break;
+                    }
+                }
+                
+                if (allCompleted) {
+                    const completionBadge = document.getElementById('completion-badge');
+                    const finalScore = document.getElementById('final-score');
+                    const score = totalQuestions > 0 ? Math.round((correctAnswers / totalQuestions) * 100) : 0;
+                    
+                    finalScore.textContent = score;
+                    completionBadge.style.display = 'block';
+                    
+                    // Scroll to completion badge
+                    completionBadge.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+            
+            // Initialize progress display
+            updateProgressBar();
+            updateScoreDisplay();
+        });
+    </script>
+</body>
+</html>
