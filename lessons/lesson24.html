@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 24: Invitations & Suggestions - EnglishMastery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #4361ee;
+            --secondary: #3a0ca3;
+            --accent: #f72585;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --success: #4cc9f0;
+            --warning: #ffb800;
+            --gray: #6c757d;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--dark);
+            background-color: #f9fafb;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 1.5rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+
+        .logo i {
+            margin-right: 10px;
+            color: var(--warning);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            margin-left: 2rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            padding: 8px 0;
+            position: relative;
+        }
+
+        nav ul li a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--warning);
+            transition: var(--transition);
+        }
+
+        nav ul li a:hover:after {
+            width: 100%;
+        }
+
+        /* Lesson Header */
+        .lesson-header {
+            background: linear-gradient(rgba(67, 97, 238, 0.05) 0%, rgba(58, 12, 163, 0.1) 100%);
+            padding: 140px 0 40px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .lesson-title {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: var(--secondary);
+        }
+
+        .lesson-meta {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+            color: var(--gray);
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* Progress bar */
+        .progress-container {
+            width: 100%;
+            background-color: #e0e0e0;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .progress-bar {
+            height: 10px;
+            background-color: var(--success);
+            border-radius: 10px;
+            width: 0%;
+            transition: width 0.5s ease;
+        }
+
+        .score-display {
+            text-align: center;
+            margin: 15px 0;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        /* Lesson Content */
+        .lesson-content {
+            margin-bottom: 50px;
+        }
+
+        .section {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .section-title {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        .section-title i {
+            margin-right: 10px;
+            font-size: 1.5rem;
+        }
+
+        /* Table Styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        th {
+            background-color: rgba(67, 97, 238, 0.1);
+            color: var(--primary);
+        }
+
+        tr:hover {
+            background-color: rgba(67, 97, 238, 0.03);
+        }
+
+        /* Exercise Styles */
+        .exercise {
+            margin: 25px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary);
+            position: relative;
+        }
+
+        .exercise-title {
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--secondary);
+        }
+
+        .options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            margin: 15px 0;
+        }
+
+        .option {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .option:hover {
+            background: rgba(67, 97, 238, 0.1);
+        }
+
+        .option.selected {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            display: inline-block;
+            cursor: pointer;
+            border: none;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+            padding: 12px 30px;
+            box-shadow: 0 4px 14px rgba(67, 97, 238, 0.4);
+            margin-top: 15px;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 18px rgba(67, 97, 238, 0.5);
+        }
+
+        .btn-secondary {
+            background: var(--gray);
+            color: white;
+            padding: 8px 15px;
+            margin-left: 10px;
+            font-size: 0.9rem;
+        }
+
+        .answer-feedback {
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 6px;
+            display: none;
+        }
+
+        .correct {
+            background: rgba(76, 201, 240, 0.1);
+            border-left: 4px solid var(--success);
+            color: #155724;
+        }
+
+        .incorrect {
+            background: rgba(247, 37, 133, 0.1);
+            border-left: 4px solid var(--accent);
+            color: #721c24;
+        }
+
+        /* Resource Links */
+        .resources {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .resource-card {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            border: 1px solid #e0e0e0;
+        }
+
+        .resource-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .resource-card h4 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        /* Completion badge */
+        .completion-badge {
+            display: none;
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px;
+            background: linear-gradient(135deg, var(--success) 0%, var(--primary) 100%);
+            border-radius: 12px;
+            color: white;
+        }
+
+        .badge-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 60px 0 30px;
+            margin-top: 50px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h3 {
+            color: var(--warning);
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #adb5bd;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                margin-top: 20px;
+                justify-content: center;
+            }
+            
+            nav ul li {
+                margin: 10px;
+            }
+            
+            .lesson-title {
+                font-size: 2rem;
+            }
+            
+            .lesson-meta {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .options {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        input[type="text"] {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin: 0 5px;
+            width: 200px;
+        }
+
+        .tip-box {
+            background-color: rgba(76, 201, 240, 0.1);
+            border-left: 4px solid var(--success);
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+
+        .contrast-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .contrast-item {
+            background: white;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .contrast-item h4 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .example-box {
+            background-color: rgba(67, 97, 238, 0.05);
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+
+        .example-item {
+            margin: 10px 0;
+            padding: 8px;
+            border-left: 3px solid var(--primary);
+            background-color: white;
+        }
+
+        @media (max-width: 600px) {
+            .contrast-box {
+                grid-template-columns: 1fr;
+            }
+            
+            input[type="text"] {
+                width: 150px;
+            }
+        }
+
+        .expression-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .expression-card {
+            background: white;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            border-left: 4px solid var(--primary);
+        }
+
+        .expression-card h4 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .dialogue-box {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 4px solid var(--warning);
+        }
+
+        .dialogue-line {
+            margin: 10px 0;
+            padding: 8px;
+            background-color: white;
+            border-radius: 4px;
+        }
+
+        .dialogue-speaker {
+            font-weight: bold;
+            color: var(--primary);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <i class="fas fa-language"></i>
+                <span>EnglishMastery</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Lessons</a></li>
+                    <li><a href="#">Practice</a></li>
+                    <li><a href="#">Resources</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Lesson Header -->
+    <div class="lesson-header">
+        <div class="container">
+            <h1 class="lesson-title">Invitations & Suggestions</h1>
+            <div class="lesson-meta">
+                <div class="meta-item">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Level: A1-A2</span>
+                </div>
+                <div class="meta-item">
+                    <i class="far fa-clock"></i>
+                    <span>Length: 60 min</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-book"></i>
+                    <span>Topic: Making, accepting & refusing invitations</span>
+                </div>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+            <div class="score-display" id="score-display">Score: 0%</div>
+        </div>
+    </div>
+
+    <!-- Lesson Content -->
+    <div class="container lesson-content">
+        <!-- Lesson Goals -->
+        <div class="section">
+            <h2 class="section-title">
+                <i class="fas fa-bullseye"></i>
+                <span>Lesson Goals</span>
+            </h2>
+            <p>By the end of this lesson, you will be able to:</p>
+            <ul>
+                <li>Use <strong>Let's, Why don't we..., How about..., Shall we...</strong> naturally</li>
+                <li>Accept: <strong>Good idea, I'd love to, Sure</strong> - Refuse politely: <strong>Sorry, I can't + reason</strong></li>
+                <li>Pronounce rising intonation in suggestions & invitations</li>
+                <li>Offer alternatives: <strong>Maybe we could..., What if we...?</strong></li>
+                <li>Avoid blunt refusals; maintain social harmony</li>
+            </ul>
+        </div>
+
+        <!-- Input & Explanation -->
+        <div class="section">
+            <h2 class="section-title">
+                <i class="fas fa-brain"></i>
+                <span>Input & Explanation</span>
+            </h2>
+            
+            <h3>1. Core Structures</h3>
+            <div class="expression-grid">
+                <div class="expression-card">
+                    <h4>Let's + base verb</h4>
+                    <p><em>(very common, friendly)</em></p>
+                    <p>Let's go bowling.</p>
+                    <p>Let's not stay late.</p>
+                </div>
+                <div class="expression-card">
+                    <h4>Why don't we/you + base...?</h4>
+                    <p>Why don't we order pizza?</p>
+                </div>
+                <div class="expression-card">
+                    <h4>How about/What about + noun/-ing?</h4>
+                    <p>How about a coffee?</p>
+                    <p>What about going to the beach?</p>
+                </div>
+                <div class="expression-card">
+                    <h4>Shall we/I + base...?</h4>
+                    <p><em>(UK polite offer/suggestion)</em></p>
+                    <p>Shall we start?</p>
+                    <p>Shall I carry that?</p>
+                </div>
+            </div>
+
+            <h3>2. Accepting (Positive Responses)</h3>
+            <div class="example-box">
+                <div class="example-item"><strong>Good idea! / Great! / I'd love to. / Sure, let's do that. / Sounds good.</strong></div>
+                <div class="example-item">Add confirmation: <strong>OK, let's meet at seven.</strong></div>
+            </div>
+
+            <h3>3. Refusing (Negative + Reason + Alternative)</h3>
+            <div class="example-box">
+                <div class="example-item"><strong>Sorry, I can't. I have to study.</strong></div>
+                <div class="example-item"><strong>I'd love to, but I'm busy tonight. Maybe another time?</strong></div>
+                <div class="example-item"><strong>That sounds fun, but I'm really tired. How about tomorrow instead?</strong></div>
+                <div class="tip-box">
+                    <p><strong>NO blunt "No" alone</strong> – sounds rude.</p>
+                </div>
+            </div>
+
+            <h3>4. Time & Place Phrases</h3>
+            <div class="example-box">
+                <div class="example-item">tonight, after class, at the weekend, tomorrow afternoon, on Saturday, in the park, at your place, after work</div>
+            </div>
+            
+            <h3>5. Common Errors</h3>
+            <table>
+                <tr>
+                    <th>❌ Wrong</th>
+                    <th>✅ Correct</th>
+                </tr>
+                <tr>
+                    <td>Let's <strong>to go</strong> out.</td>
+                    <td>Let's <strong>go</strong> out.</td>
+                </tr>
+                <tr>
+                    <td>How about <strong>go</strong> shopping?</td>
+                    <td>How about <strong>going</strong> shopping?</td>
+                </tr>
+                <tr>
+                    <td>Why don't <strong>go</strong> we to the cinema?</td>
+                    <td>Why don't <strong>we go</strong> to the cinema?</td>
+                </tr>
+                <tr>
+                    <td><strong>Shall we to watch</strong> a film?</td>
+                    <td><strong>Shall we watch</strong> a film?</td>
+                </tr>
+                <tr>
+                    <td>No, I can't <strong>coming</strong>.</td>
+                    <td>Sorry, I <strong>can't come</strong>.</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Guided Practice -->
+        <div class="section">
+            <h2 class="section-title">
+                <i class="fas fa-pen"></i>
+                <span>Guided Practice</span>
+            </h2>
+            
+            <div class="exercise">
+                <div class="exercise-title">1. Choose correct form:</div>
+                <ol type="a">
+                    <li>Let's <input type="text" class="answer-input" data-answer="watch"> (watch) a film.</li>
+                    <li>How about <input type="text" class="answer-input" data-answer="going"> (go) for a walk?</li>
+                </ol>
+                
+                <div class="exercise-title">2. Accept positively:</div>
+                <p>go / concert / Saturday → <input type="text" class="answer-input" data-answer="I'd love to go to the concert on Saturday"></p>
+                
+                <div class="exercise-title">3. Refuse politely:</div>
+                <p>can't / homework / suggest tomorrow → <input type="text" class="answer-input" data-answer="Sorry, I can't. I have homework. How about tomorrow"></p>
+                
+                <div class="exercise-title">4. Transform:</div>
+                <p>We could order sushi. → start with How about... → <input type="text" class="answer-input" data-answer="How about ordering sushi"></p>
+                
+                <button class="btn btn-primary check-answers">Check Answers</button>
+                <button class="btn btn-secondary reset-exercise">Reset</button>
+                <div class="answer-feedback"></div>
+            </div>
+        </div>
+
+        <!-- Individual Exercises -->
+        <div class="section">
+            <h2 class="section-title">
+                <i class="fas fa-tasks"></i>
+                <span>Individual Exercises</span>
+            </h2>
+            
+            <div class="exercise">
+                <div class="exercise-title">1. Form correct suggestion:</div>
+                <ol type="a">
+                    <li>Let's / eat / out → <input type="text" class="answer-input" data-answer="Let's eat out"></li>
+                    <li>Why don't we / play / board games → <input type="text" class="answer-input" data-answer="Why don't we play board games"></li>
+                    <li>How about / a coffee / after class → <input type="text" class="answer-input" data-answer="How about a coffee after class"></li>
+                    <li>Shall we / start / now → <input type="text" class="answer-input" data-answer="Shall we start now"></li>
+                    <li>What about / go / beach → <input type="text" class="answer-input" data-answer="What about going to the beach"></li>
+                </ol>
+                <button class="btn btn-primary check-answers">Check Answers</button>
+                <button class="btn btn-secondary reset-exercise">Reset</button>
+                <div class="answer-feedback"></div>
+            </div>
+            
+            <div class="exercise">
+                <div class="exercise-title">2. Accept invitations (positive reply):</div>
+                <ol type="a">
+                    <li>Let's watch a film tonight. → <input type="text" class="answer-input" data-answer="Good idea"></li>
+                    <li>Shall we go shopping tomorrow? → <input type="text" class="answer-input" data-answer="I'd love to"></li>
+                    <li>How about a picnic on Sunday? → <input type="text" class="answer-input" data-answer="Sounds great"></li>
+                </ol>
+                <button class="btn btn-primary check-answers">Check Answers</button>
+                <button class="btn btn-secondary reset-exercise">Reset</button>
+                <div class="answer-feedback"></div>
+            </div>
+            
+            <div class="exercise">
+                <div class="exercise-title">3. Refuse with reason + alternative:</div>
+                <ol type="a">
+                    <li>Let's go jogging now. (tired / later) → <input type="text" class="answer-input" data-answer="Sorry, I'm tired. Maybe later"></li>
+                    <li>Why don't we order pizza? (on diet / salad) → <input type="text" class="answer-input" data-answer="I'd love to, but I'm on a diet. How about a salad instead"></li>
+                    <li>Shall we play video games? (exam tomorrow / after) → <input type="text" class="answer-input" data-answer">Sorry, I have an exam tomorrow. Maybe after the exam</li>
+                </ol>
+                <button class="btn btn-primary check-answers">Check Answers</button>
+                <button class="btn btn-secondary reset-exercise">Reset</button>
+                <div class="answer-feedback"></div>
+            </div>
+            
+            <div class="exercise">
+                <div class="exercise-title">4. Multiple choice – natural reply:</div>
+                <p>"Let's grab a coffee."</p>
+                <div class="options">
+                    <div class="option" data-correct="true">Good idea!</div>
+                    <div class="option" data-correct="false">No.</div>
+                    <div class="option" data-correct="false">I can grab.</div>
+                </div>
+                <button class="btn btn-primary check-answers">Check Answers</button>
+                <button class="btn btn-secondary reset-exercise">Reset</button>
+                <div class="answer-feedback"></div>
+            </div>
+        </div>
+
+        <!-- Completion Badge -->
+        <div class="completion-badge" id="completion-badge">
+            <div class="badge-icon">
+                <i class="fas fa-trophy"></i>
+            </div>
+            <h2>Congratulations!</h2>
+            <p>You've completed Lesson 24: Invitations & Suggestions</p>
+            <p>Your final score: <span id="final-score">0</span>%</p>
+        </div>
+
+        <!-- Extra Resources -->
+        <div class="section">
+            <h2 class="section-title">
+                <i class="fas fa-book-open"></i>
+                <span>Extra Resources</span>
+            </h2>
+            
+            <div class="resources">
+                <div class="resource-card">
+                    <h4>British Council – Invitations & suggestions</h4>
+                    <p>Video & quiz practice</p>
+                    <a href="https://learnenglishteens.britishcouncil.org/skills/speaking/intermediate-speaking/inviting-accepting-refusing" target="_blank">Visit Resource →</a>
+                </div>
+                <div class="resource-card">
+                    <h4>Cambridge – "Making suggestions" interactive</h4>
+                    <p>Practice exercises from Cambridge English</p>
+                    <a href="https://www.cambridgeenglish.org/learning-english/activities-for-learners/" target="_blank">Visit Resource →</a>
+                </div>
+                <div class="resource-card">
+                    <h4>YouTube – "Let's, How about, Shall we?"</h4>
+                    <p>3-min functional language from BBC</p>
+                    <a href="https://www.youtube.com/watch?v=K5JSdgvhv8I" target="_blank">Watch Video →</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Homework -->
+        <div class="section">
+            <h2 class="section-title">
+                <i class="fas fa-home"></i>
+                <span>Homework</span>
+            </h2>
+            
+            <ol>
+                <li>Record 60-second conversation with a friend: 3 invitations (different structures), accept 1, refuse 2 with reasons & alternatives.</li>
+                <li>Write 10-line WhatsApp chat: make 5 suggestions, reply 3 accept, 2 refuse + reasons.</li>
+                <li>Finish exercises 6, 7 & 10 from the individual exercises.</li>
+            </ol>
+            
+            <p style="margin-top: 20px;"><strong>Next Lesson:</strong> Lesson 25 – At the Restaurant (ordering, paying, complaints)</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>EnglishMastery</h3>
+                    <p>Master English with our AI-powered platform featuring structured lessons, interactive exercises, and personalized feedback.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Lessons</a></li>
+                        <li><a href="#">Practice</a></li>
+                        <li><a href="#">Resources</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 EnglishMastery. All rights reserved. | AI Assistant Professor</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize lesson progress
+            let totalQuestions = document.querySelectorAll('.answer-input, .option').length;
+            let completedQuestions = 0;
+            let correctAnswers = 0;
+            let exerciseStatus = {};
+            
+            // Load saved progress if available
+            if (localStorage.getItem('lesson24Progress')) {
+                const savedData = JSON.parse(localStorage.getItem('lesson24Progress'));
+                completedQuestions = savedData.completedQuestions || 0;
+                correctAnswers = savedData.correctAnswers || 0;
+                exerciseStatus = savedData.exerciseStatus || {};
+                
+                // Restore answered questions
+                restoreProgress();
+                updateProgressBar();
+                updateScoreDisplay();
+            }
+            
+            // Add event listeners to check answer buttons
+            const checkButtons = document.querySelectorAll('.check-answers');
+            checkButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const exercise = this.closest('.exercise');
+                    const exerciseId = Array.from(document.querySelectorAll('.exercise')).indexOf(exercise);
+                    const inputs = exercise.querySelectorAll('.answer-input');
+                    const options = exercise.querySelectorAll('.option');
+                    const feedback = exercise.querySelector('.answer-feedback');
+                    
+                    let allCorrect = true;
+                    let feedbackHTML = '';
+                    let exerciseCorrect = 0;
+                    let exerciseTotal = inputs.length + options.length;
+                    
+                    // Check if this exercise was already completed
+                    const wasCompleted = exerciseStatus[exerciseId] && exerciseStatus[exerciseId].completed;
+                    
+                    // Check input answers
+                    inputs.forEach(input => {
+                        const userAnswer = input.value.trim().toLowerCase();
+                        const correctAnswer = input.getAttribute('data-answer').toLowerCase();
+                        
+                        if (userAnswer === correctAnswer) {
+                            input.style.borderColor = '#4cc9f0';
+                            input.classList.add('correct');
+                            exerciseCorrect++;
+                        } else {
+                            input.style.borderColor = '#f72585';
+                            input.classList.add('incorrect');
+                            allCorrect = false;
+                            feedbackHTML += `<p>For "${input.previousElementSibling ? input.previousElementSibling.textContent : 'this question'}", the correct answer is "${correctAnswer}"</p>`;
+                        }
+                        
+                        // Update completed questions count if this is a new answer
+                        if (userAnswer && !input.hasAttribute('data-answered')) {
+                            completedQuestions++;
+                            input.setAttribute('data-answered', 'true');
+                        }
+                    });
+                    
+                    // Check option answers
+                    options.forEach(option => {
+                        if (option.classList.contains('selected')) {
+                            const isCorrect = option.getAttribute('data-correct') === 'true';
+                            
+                            if (isCorrect) {
+                                option.style.borderColor = '#4cc9f0';
+                                option.classList.add('correct');
+                                exerciseCorrect++;
+                            } else {
+                                option.style.borderColor = '#f72585';
+                                option.classList.add('incorrect');
+                                allCorrect = false;
+                                feedbackHTML += `<p>"${option.textContent}" is not the correct answer</p>`;
+                            }
+                            
+                            // Update completed questions count if this is a new answer
+                            if (!option.hasAttribute('data-answered')) {
+                                completedQuestions++;
+                                option.setAttribute('data-answered', 'true');
+                            }
+                        }
+                    });
+                    
+                    // Update correct answers count if this exercise wasn't already completed
+                    if (!wasCompleted && allCorrect) {
+                        correctAnswers += exerciseTotal;
+                    } else if (!wasCompleted) {
+                        correctAnswers += exerciseCorrect;
+                    }
+                    
+                    // Save exercise status
+                    exerciseStatus[exerciseId] = {
+                        completed: allCorrect,
+                        score: exerciseCorrect,
+                        total: exerciseTotal
+                    };
+                    
+                    // Save progress to localStorage
+                    saveProgress();
+                    
+                    // Show feedback
+                    if (allCorrect) {
+                        feedback.innerHTML = '<p>All answers correct! Well done! 🎉</p>';
+                        feedback.classList.add('correct');
+                        feedback.classList.remove('incorrect');
+                    } else {
+                        feedback.innerHTML = '<p>Some answers need correction:</p>' + feedbackHTML;
+                        feedback.classList.add('incorrect');
+                        feedback.classList.remove('correct');
+                    }
+                    
+                    feedback.style.display = 'block';
+                    
+                    // Update progress and score displays
+                    updateProgressBar();
+                    updateScoreDisplay();
+                    
+                    // Check if all exercises are completed
+                    checkAllExercisesCompleted();
+                });
+            });
+            
+            // Add event listeners to option buttons
+            const options = document.querySelectorAll('.option');
+            options.forEach(option => {
+                option.addEventListener('click', function() {
+                    // Remove any previous selections in this question group
+                    const parent = this.closest('.options');
+                    parent.querySelectorAll('.option').forEach(opt => {
+                        opt.classList.remove('selected');
+                    });
+                    
+                    // Select this option
+                    this.classList.add('selected');
+                });
+            });
+            
+            // Add event listeners to reset buttons
+            const resetButtons = document.querySelectorAll('.reset-exercise');
+            resetButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const exercise = this.closest('.exercise');
+                    const inputs = exercise.querySelectorAll('.answer-input');
+                    const options = exercise.querySelectorAll('.option');
+                    const feedback = exercise.querySelector('.answer-feedback');
+                    
+                    inputs.forEach(input => {
+                        input.value = '';
+                        input.style.borderColor = '';
+                        input.classList.remove('correct', 'incorrect');
+                        
+                        // Update completed questions count if this was answered
+                        if (input.hasAttribute('data-answered')) {
+                            completedQuestions--;
+                            input.removeAttribute('data-answered');
+                        }
+                    });
+                    
+                    options.forEach(option => {
+                        option.classList.remove('selected', 'correct', 'incorrect');
+                        option.style.borderColor = '';
+                        
+                        // Update completed questions count if this was answered
+                        if (option.hasAttribute('data-answered')) {
+                            completedQuestions--;
+                            option.removeAttribute('data-answered');
+                        }
+                    });
+                    
+                    feedback.style.display = 'none';
+                    
+                    // Reset exercise status
+                    const exerciseId = Array.from(document.querySelectorAll('.exercise')).indexOf(exercise);
+                    if (exerciseStatus[exerciseId]) {
+                        correctAnswers -= exerciseStatus[exerciseId].score;
+                        delete exerciseStatus[exerciseId];
+                    }
+                    
+                    // Save progress to localStorage
+                    saveProgress();
+                    
+                    // Update progress and score displays
+                    updateProgressBar();
+                    updateScoreDisplay();
+                });
+            });
+            
+            // Function to update progress bar
+            function updateProgressBar() {
+                const progressBar = document.getElementById('progress-bar');
+                const progress = totalQuestions > 0 ? (completedQuestions / totalQuestions) * 100 : 0;
+                progressBar.style.width = progress + '%';
+            }
+            
+            // Function to update score display
+            function updateScoreDisplay() {
+                const scoreDisplay = document.getElementById('score-display');
+                const score = totalQuestions > 0 ? Math.round((correctAnswers / totalQuestions) * 100) : 0;
+                scoreDisplay.textContent = `Score: ${score}%`;
+            }
+            
+            // Function to save progress to localStorage
+            function saveProgress() {
+                const progressData = {
+                    completedQuestions: completedQuestions,
+                    correctAnswers: correctAnswers,
+                    exerciseStatus: exerciseStatus
+                };
+                localStorage.setItem('lesson24Progress', JSON.stringify(progressData));
+            }
+            
+            // Function to restore progress from localStorage
+            function restoreProgress() {
+                const inputs = document.querySelectorAll('.answer-input');
+                const options = document.querySelectorAll('.option');
+                
+                // Restore answers based on exercise status
+                for (const [exerciseId, status] of Object.entries(exerciseStatus)) {
+                    const exercise = document.querySelectorAll('.exercise')[exerciseId];
+                    if (!exercise) continue;
+                    
+                    if (status.completed) {
+                        const exerciseInputs = exercise.querySelectorAll('.answer-input');
+                        const exerciseOptions = exercise.querySelectorAll('.option');
+                        
+                        exerciseInputs.forEach(input => {
+                            input.value = input.getAttribute('data-answer');
+                            input.setAttribute('data-answered', 'true');
+                            input.classList.add('correct');
+                        });
+                        
+                        exerciseOptions.forEach(option => {
+                            if (option.getAttribute('data-correct') === 'true') {
+                                option.classList.add('selected', 'correct');
+                                option.setAttribute('data-answered', 'true');
+                            }
+                        });
+                    }
+                }
+            }
+            
+            // Function to check if all exercises are completed
+            function checkAllExercisesCompleted() {
+                const exercises = document.querySelectorAll('.exercise');
+                let allCompleted = true;
+                
+                for (let i = 0; i < exercises.length; i++) {
+                    if (!exerciseStatus[i] || !exerciseStatus[i].completed) {
+                        allCompleted = false;
+                        break;
+                    }
+                }
+                
+                if (allCompleted) {
+                    const completionBadge = document.getElementById('completion-badge');
+                    const finalScore = document.getElementById('final-score');
+                    const score = totalQuestions > 0 ? Math.round((correctAnswers / totalQuestions) * 100) : 0;
+                    
+                    finalScore.textContent = score;
+                    completionBadge.style.display = 'block';
+                    
+                    // Scroll to completion badge
+                    completionBadge.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+            
+            // Initialize progress display
+            updateProgressBar();
+            updateScoreDisplay();
+        });
+    </script>
+</body>
+</html>
